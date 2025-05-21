@@ -14,8 +14,8 @@ This project demonstrates a **Man-In-The-Middle (MITM)** attack setup using the 
 - **Attacker**: Kali Linux system — captures and inspects network packets using tools like Wireshark, `tcpdump`, or `ettercap`.
 
 ---
+![MITM](https://github.com/user-attachments/assets/09d35d74-8b38-482b-9ede-602b9229d043)
 
-![MITM](https://github.com/user-attachments/assets/09c7cf8c-4ed4-4c3d-b491-b1a1d2fcb72b)
 
 
 🛠️ Step 1: Flashing Debian on BeaglePlay
