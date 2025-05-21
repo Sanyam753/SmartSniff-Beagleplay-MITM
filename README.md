@@ -15,6 +15,9 @@ This project demonstrates a **Man-In-The-Middle (MITM)** attack setup using the 
 
 ---
 
+![MITM](https://github.com/user-attachments/assets/09c7cf8c-4ed4-4c3d-b491-b1a1d2fcb72b)
+
+
 🛠️ Step 1: Flashing Debian on BeaglePlay
 
 1. Download Debian Image
