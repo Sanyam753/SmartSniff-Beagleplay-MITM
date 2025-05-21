@@ -1,0 +1,1 @@
+sudo iptables-save > iptables.rules
