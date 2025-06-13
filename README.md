@@ -18,7 +18,7 @@ This project demonstrates a Man-In-The-Middle (MITM) attack setup using the Beag
 
 
 
-## 🛠️ Step 1: Flashing Debian on BeaglePlay
+##Step 1: Flashing Debian on BeaglePlay
 
 1. Download Debian Image
    Get the latest [BeaglePlay Debian Image](https://beagleboard.org/latest-images).
@@ -166,7 +166,6 @@ Add before `exit 0`:
 ```bash
 iptables-restore < /etc/iptables.ipv4.nat
 ```
-
 ---
 
 ###  2.7 Start the Access Point
