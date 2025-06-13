@@ -1,19 +1,19 @@
 
 
 ````markdown
-# 🔥 BeaglePlay MITM Gateway for IoT Device Surveillance
+🔥 BeaglePlay MITM Gateway for IoT Device Surveillance
 
-This project demonstrates a **Man-In-The-Middle (MITM)** attack setup using the **BeaglePlay** as a Wi-Fi gateway to intercept and analyze data from **IoT devices** (like smartwatches, smart bulbs, etc.). The captured data is analyzed and stored using Kali Linux as the attacker's machine. This is an educational and research-focused setup to understand IoT vulnerabilities, not for unethical use.
+This project demonstrates a Man-In-The-Middle (MITM) attack setup using the BeaglePlay as a Wi-Fi gateway to intercept and analyze data from IoT devices (like smartwatches, smart bulbs, etc.). The captured data is analyzed and stored using Kali Linux as the attacker's machine. This is an educational and research-focused setup to understand IoT vulnerabilities, not for unethical use.
 
 ---
 
 ⚙️ Project Overview
 
-- **Gateway**: [BeaglePlay](https://beagleboard.org/play) — acts as a fake Wi-Fi access point.
-- **Victim**: Any smart IoT device (e.g., smartwatch, phone, Ubuntu system) connecting to the BeaglePlay Wi-Fi.
-- **Attacker**: Kali Linux system — captures and inspects network packets using tools like Wireshark, `tcpdump`, or `ettercap`.
+- Gateway: [BeaglePlay](https://beagleboard.org/play) — acts as a fake Wi-Fi access point.
+- Victim: Any smart IoT device (e.g., smartwatch, phone, Ubuntu system) connecting to the BeaglePlay Wi-Fi.
+- Attacker: Kali Linux system — captures and inspects network packets using tools like Wireshark, `tcpdump`, or `ettercap`.
 
----
+
 ![MITM](https://github.com/user-attachments/assets/09d35d74-8b38-482b-9ede-602b9229d043)
 
 
@@ -42,7 +42,7 @@ This project demonstrates a **Man-In-The-Middle (MITM)** attack setup using the 
    password: temppwd
 ````
 
----
+
 
 ## 📶 Step 2: Configure BeaglePlay as Wi-Fi Access Point
 
@@ -55,7 +55,7 @@ sudo systemctl stop hostapd
 sudo systemctl stop dnsmasq
 ```
 
----
+
 
 ### 📁 2.2 Create Hostapd Config File
 
@@ -148,7 +148,7 @@ sudo sysctl -p
 
 ---
 
-### 🔥 2.6 Setup NAT with iptables
+###  2.6 Setup NAT with iptables
 
 ```bash
 sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
@@ -169,7 +169,7 @@ iptables-restore < /etc/iptables.ipv4.nat
 
 ---
 
-### 🚀 2.7 Start the Access Point
+###  2.7 Start the Access Point
 
 ```bash
 sudo systemctl unmask hostapd
@@ -178,11 +178,11 @@ sudo systemctl restart hostapd
 sudo systemctl restart dnsmasq
 ```
 
-> ✅ BeaglePlay is now hosting a Wi-Fi hotspot: **SSID: MITM\_AP | Password: mitmpassword**
+> BeaglePlay is now hosting a Wi-Fi hotspot: **SSID: MITM\_AP | Password: mitmpassword**
 
 ---
 
-## 🧠 Step 3: Victim Setup (Smartwatch / Smart Device / Ubuntu)
+##  Step 3: Victim Setup (Smartwatch / Smart Device / Ubuntu)
 
 1. Boot any smart device or Linux system with Wi-Fi capability.
 2. Connect to the fake AP:
@@ -192,11 +192,11 @@ sudo systemctl restart dnsmasq
 
 ---
 
-## 💻 Step 4: Attacker Machine (Kali Linux)
+##  Step 4: Attacker Machine (Kali Linux)
 
 The Kali system must be connected to BeaglePlay's Ethernet port (or USB Ethernet), to monitor or collect traffic.
 
-### 📡 4.1 Monitor Network Traffic
+###  4.1 Monitor Network Traffic
 
 Use `tcpdump`:
 
@@ -225,7 +225,7 @@ Filter DNS, HTTP, or MQTT traffic from smart devices:
 
 ---
 
-## 📥 Step 5: Collect & Store Data
+##  Step 5: Collect & Store Data
 
 * Export `.pcap` from Wireshark.
 * Parse using Python + Scapy:
@@ -265,14 +265,12 @@ beagleplay-mitm-gateway/
 
 This project is strictly for **educational purposes** and ethical cybersecurity research. Do **not** use it for malicious or unauthorized network monitoring. Misuse may lead to legal consequences.
 
----
 
 ## ✍️ Authors
 
 * Sanyam Sankhala
 * BeaglePlay-based IoT researcher
 
----
 
 ## 📬 Contact
 
